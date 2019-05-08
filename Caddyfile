@@ -1,5 +1,18 @@
-localhost:80 tjbearse.net:80 # 80 for right not to be careful about cert service rate limits
+https://localhost tjbearse.net
 
-# tls bearse.thomas@gmail.com # this also triggers tls
-# gzip
-# ext .html
+# TODO change to bearse.thomas@gmail.com and allow auto ACME stuff
+tls self_signed
+
+gzip
+ext .html
+
+jwt {
+	path /
+	redirect /login?backTo={rewrite_uri}
+	allow sub bob
+	passthrough /
+}
+
+login {
+	simple bob=secret
+}

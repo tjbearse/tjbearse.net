@@ -1,6 +1,11 @@
 version: "3"
 services:
     caddy:
+        build:
+            context: github.com/abiosoft/caddy-docker.git
+            dockerfile: Dockerfile-no-stats
+            args:
+                plugins: "jwt,login"
         image: "abiosoft/caddy:no-stats"
         ports:
             - "8080:80"
