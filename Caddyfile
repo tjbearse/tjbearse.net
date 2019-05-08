@@ -1,0 +1,5 @@
+localhost:80 tjbearse.net:80 # 80 for right not to be careful about cert service rate limits
+
+# tls bearse.thomas@gmail.com # this also triggers tls
+# gzip
+# ext .html

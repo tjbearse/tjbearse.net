@@ -1,0 +1,11 @@
+version: "3"
+services:
+    caddy:
+        image: "abiosoft/caddy:no-stats"
+        ports:
+            - "8080:80"
+            - "8443:443"
+        volumes:
+            - "./Caddyfile:/etc/Caddyfile:ro"
+            - ".caddy:/root/.caddy"
+            - "./srv:/srv:ro"
