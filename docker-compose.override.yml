@@ -1,0 +1,8 @@
+version: "3"
+services:
+    caddy:
+        volumes:
+            - "./Caddyfile:/etc/Caddyfile:ro"
+            - "./Caddyfile.comm:/etc/Caddyfile.comm:ro"
+            - ".caddy:/root/.caddy"
+            - "./srv:/srv:ro"

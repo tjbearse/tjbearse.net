@@ -1,5 +1,5 @@
 https://localhost tjbearse.net:443
 
-tls self_signed
+tls bearse.thomas@gmail.com
 
 import Caddyfile.comm

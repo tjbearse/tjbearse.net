@@ -1,0 +1,13 @@
+gzip
+ext .html
+
+jwt {
+	path /
+	redirect /login?backTo={rewrite_uri}
+	allow sub bob
+	passthrough /
+}
+
+login {
+	simple bob=secret
+}

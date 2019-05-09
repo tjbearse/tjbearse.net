@@ -6,11 +6,13 @@ services:
             dockerfile: Dockerfile-no-stats
             args:
                 plugins: "jwt,login"
-        image: "abiosoft/caddy:no-stats"
+        environment:
+            ACME_AGREE: "true"
         ports:
             - "8080:80"
             - "8443:443"
         volumes:
-            - "./Caddyfile:/etc/Caddyfile:ro"
+            - "./Caddyfile.prod:/etc/Caddyfile:ro"
+            - "./Caddyfile.comm:/etc/Caddyfile.comm:ro"
             - ".caddy:/root/.caddy"
             - "./srv:/srv:ro"
