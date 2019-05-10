@@ -1,18 +1,12 @@
-version: "3"
+version: "3.4"
 services:
     caddy:
         build:
-            context: github.com/abiosoft/caddy-docker.git
-            dockerfile: Dockerfile-no-stats
-            args:
-                plugins: "jwt,login"
-        environment:
-            ACME_AGREE: "true"
+            context: .
+            target: prod
         ports:
             - "8080:80"
             - "8443:443"
         volumes:
-            - "./Caddyfile.prod:/etc/Caddyfile:ro"
-            - "./Caddyfile.comm:/etc/Caddyfile.comm:ro"
             - ".caddy:/root/.caddy"
             - "./srv:/srv:ro"
