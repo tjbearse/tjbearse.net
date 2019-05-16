@@ -10,3 +10,12 @@ services:
         volumes:
             - ".caddy:/root/.caddy"
             - "./srv:/srv:ro"
+    robo:
+        build:
+            context: github.com/tjbearse/robo
+        entrypoint:
+            - ./robo
+            - -addr
+            - :8081
+        ports:
+            - "8081:8081"
