@@ -19,3 +19,8 @@ proxy /robo/ http://robo:8081 {
 	without /robo/
 	websocket
 }
+
+errors {
+	500 error5xx.html
+	502 error5xx.html
+}
