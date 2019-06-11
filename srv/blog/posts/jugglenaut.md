@@ -5,7 +5,7 @@ date: June 10th, 2019
 ---
 Jugglenaut is the first game in my attempt at the [Game a Week Challenge](./gameaweek.md). It was developed with the theme "10 second gameplay" in mind. It can be played online and the source is also available via [github repository](https://github.com/tjbearse/jugglenaut). I'd be happy to hear any comments you may have or bugs you encounter.
 
-**[Play Jugglenaut](../games/jugglenaut)** (best experienced with a gamepad controller)
+**[Play Jugglenaut](../games/jugglenaut.md)** (best experienced with a gamepad controller)
 
 
 ## What I Learned
