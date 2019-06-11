@@ -12,6 +12,12 @@ login {
 	simple bob=secret
 }
 
+browse /blog
+markdown /blog {
+	template blog/templates/post.html
+	templatedir blog/templates/*
+}
+
 proxy /robo/ http://robo:8081 {
 	header_upstream Host {host}
 	header_upstream X-Real-IP {remote}

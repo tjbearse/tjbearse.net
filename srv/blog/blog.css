@@ -1,0 +1,75 @@
+html {
+	font-family: sans-serif;
+}
+
+body {
+	margin: 0;
+	background: #eee;
+}
+
+
+#content {
+	max-width: 1100px;
+	margin: 0px auto;
+}
+#body {
+	border-radius: 16px;
+	background: #fff;
+	padding: 16px 32px 32px 32px;
+}
+
+#header {
+	background: #222;
+	padding: 16px 8px;
+	color: #fff;
+}
+
+#header a {
+	color: #fff;
+	margin: 8px;
+	text-decoration: none;
+}
+#header a:hover {
+	text-decoration: underline;
+}
+
+.post-date {
+	font-style: italic;
+	color: #666;
+}
+.author {
+	font-style: italic;
+	color: #666;
+}
+
+.titlebar .title {
+	flex-grow: 1;
+}
+
+.titlebar {
+	display: flex;
+	align-items: baseline;
+    justify-content: space-between;
+    align-content: stretch;
+}
+
+.float-right {
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+#unityContainer {
+	margin: 0 auto !important;
+}
+.unityfooter .fullscreen {
+	color: #666;
+	float: right;
+}
