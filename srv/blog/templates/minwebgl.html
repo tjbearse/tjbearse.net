@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>{{.Doc.gamename}}</title>
+		<link rel="stylesheet" href="/blog/blog.css">
+		<script src="{{.Doc.gamefolder}}/Build/UnityLoader.js"></script>
+		<script>
+		 UnityLoader.instantiate("unityContainer", "{{.Doc.gamefolder}}/Build/builds.json");
+		</script>
+	</head>
+	<body>
+		{{.Include "blog/templates/header.html" }}
+		<div id="content">
+			<h1>{{.Doc.gamename}}</h1>
+			<div id="body">
+				<div id="unityContainer" style="width: 960px; height: 600px"></div>
+				<div class="unityfooter">
+					<div class="fullscreen" onclick="unityInstance.SetFullscreen(1)">(fullscreen)</div>
+				</div>
+				<div>
+					{{.Doc.body}}
+				</div>
+			</div>
+		</div>
+	</body>
+	</body>
+</html>
